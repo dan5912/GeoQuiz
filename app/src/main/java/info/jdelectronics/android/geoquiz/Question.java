@@ -6,12 +6,23 @@ package info.jdelectronics.android.geoquiz;
 public class Question {
     private int mTextResId;
     private boolean mAnswerTrue;
+    private boolean mCheated;
 
-    public Question(int textResId, boolean answerTrue){
+
+
+    public Question(int textResId, boolean answerTrue, boolean didCheat){
 
         mTextResId = textResId;
         mAnswerTrue = answerTrue;
 
+    }
+
+    public boolean hasCheated() {
+        return mCheated;
+    }
+
+    public void didCheat(boolean cheated) {
+        mCheated = cheated;
     }
 
     public boolean isAnswerTrue() {
